@@ -1,3 +1,5 @@
+from typing import List
+
 from django.db import models
 
 # Create your models here.
@@ -11,6 +13,7 @@ class MenuItem(models.Model):
         null=True,
         blank=True,
         related_name='child',
+        default=0,
     )
 
     def __str__(self) -> str:

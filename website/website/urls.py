@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
+from django.views import generic
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', generic.RedirectView.as_view(url='/index/', permanent=False)),
     path('', include('menuapp.urls')),
 ]

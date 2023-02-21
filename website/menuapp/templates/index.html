@@ -1,5 +1,3 @@
 {% load burger-menu %}
-<div class="name">{{ name }}</div>
-<div class="base-menu">
-    {% draw_menu 'root' %}
-</div>
+<h1>{{ name }}</h1>
+<nav>{% draw_menu %}</nav>
