@@ -12,4 +12,6 @@ class MenuItem(models.Model):
         blank=True,
         related_name='child',
     )
-    is_active = models.BooleanField(default=False)
+
+    def __str__(self) -> str:
+        return self.name
