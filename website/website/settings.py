@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-q&x54=gr@czsgfij%zkerx*xqryjo0s^itlt46*t3-n=%o*fd0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.0', 'localhost']
 
 
 # Application definition
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'burger-menu',
+        'NAME': 'django-docker',
         'USER': 'postgres',
         'PASSWORD': 'alique163',
-        'HOST': '',
+        'HOST': 'db_django_menu',
         'PORT': 5432,
     }
 }
